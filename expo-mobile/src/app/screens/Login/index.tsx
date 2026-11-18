@@ -1,8 +1,10 @@
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
-import { Alert, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Header from '../../../components/shared/Header';
+import { auth } from '../config/firebase';
 //import { RootStackParamList } from "../../../types";
 
 /*type HomeScreenNavigationProp = NativeStackNavigationProp<
@@ -14,15 +16,20 @@ import Header from '../../../components/shared/Header';
 export default function Login() {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
+    const navigation = useNavigation()
 //    const navigation = useNavigation<HomeScreenNavigationProp>()
 
-    const handleInputChange = ( inputText ) => {
-        setText(inputText)
-    }
+    const handleButtonPress = async () => {
+        try {
+            await placeholdercommand(auth, user, password);
+            navigation.navigate('Home')
+        }catch(error:any){
+            setError(error.message)
+        }
 
-    const handleButtonPress = () => {
-//        Alert.alert('Usuario digitado:', user)
-//        Alert.alert('Senha digitada:', password)
+/*        Alert.alert('Usuario digitado:', user)
+        Alert.alert('Senha digitada:', password)
         Alert.alert(
             'Credenciais Digitadas',
             `Usuário: ${user}\nSenha: ${password}`,
@@ -36,8 +43,8 @@ export default function Login() {
             ],
             {cancelable: true}
         );
-
-        /*if (user){
+        
+        if (user){
             navigation.navigate('screens/Home/index', {userName: user});
         } else {
             Alert.alert("Error", "User not logged in");
@@ -73,7 +80,7 @@ export default function Login() {
 
             <StatusBar style="auto"/>
             <TouchableOpacity style={styles.button} onPress={handleButtonPress}>
-            <Text>Enviar</Text>
+            <Text>Login</Text>
             </TouchableOpacity>
         </View>
 

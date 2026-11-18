@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "807053019696",
+    "project_id": "fiap-fase-4",
+    "storage_bucket": "fiap-fase-4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:807053019696:android:21cd0385057e85a0b6fbf5",
+        "android_client_info": {
+          "package_name": "com.Nat250.fiapfase4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0tbrCnHaic2cMggqde00qUKjtOkFr27E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
