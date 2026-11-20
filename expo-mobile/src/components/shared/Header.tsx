@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Header() {
+export default function Header({ headerText }: { headerText:any }) {
     return (
         <View style={styles.header}>
             <View>
-                <Text style={styles.headerText}>Header Teste</Text>
+                <Text style={styles.headerText}>{headerText}</Text>
             </View>
         </View>
     )

@@ -60,7 +60,7 @@ export default function Login() {
         
         <TextInput/>
         
-        <Header/>
+        <Header headerText={'Login'}/>
         <View style={styles.container}>
             <Text>Texto Teste</Text>
 
