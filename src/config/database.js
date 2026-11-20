@@ -51,6 +51,9 @@ async function searchPosts(term) {
 }
 
 //EXECUTA A INICIALIZACAO
-initDatabase();
 
-module.exports = pool;
+module.exports = {
+    pool,
+    initDatabase,
+    searchPosts
+};

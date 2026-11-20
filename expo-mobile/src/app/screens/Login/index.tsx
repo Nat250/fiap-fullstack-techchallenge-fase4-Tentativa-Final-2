@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Header from '../../../components/shared/Header';
-import { auth } from '../config/firebase';
+//import { auth } from '../config/firebase';
 //import { RootStackParamList } from "../../../types";
 
 /*type HomeScreenNavigationProp = NativeStackNavigationProp<
@@ -22,8 +22,8 @@ export default function Login() {
 
     const handleButtonPress = async () => {
         try {
-            await placeholdercommand(auth, user, password);
-            navigation.navigate('Home')
+//            await placeholdercommand(auth, user, password);
+//            navigation.navigate('Home')
         }catch(error:any){
             setError(error.message)
         }
