@@ -1,7 +1,7 @@
+import Header from '@/components/shared/Header';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect, useState } from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Header from '../../../components/shared/Header';
 
 const ListScreen = () => {
     const [data, setData] = useState<any[]>([]);
@@ -24,7 +24,7 @@ const ListScreen = () => {
         return (
             <View>
                 <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.author}>Por: {item.author}</Text>
+                <Text style={styles.author}>Professor: {item.author}</Text>
                 <Text style={styles.content}>{item.content}</Text>
             </View>
         );

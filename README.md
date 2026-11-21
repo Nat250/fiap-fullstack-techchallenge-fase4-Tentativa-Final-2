@@ -1,65 +1,125 @@
-# FIAP Pos-Tech - Fase 3 (Frontend) - Tech Challenge
+# FIAP Pos-Tech - Fase 4 (Mobile) - Tech Challenge
 
-Backend REST em Node.js para uma plataforma de blogging educacional, com CRUD de postagens, busca, persistencia em banco de dados, Docker, CI/CD e testes automatizados.
+A seção expo-mobile desse projeto foi desenvolvida para a Tech Challenge da Fase 4 - Mobile, permitindo que o programa também seja utilizado em dispositivos Android.
 
-(Descricao)
+A aplicação foi desenvolvida em React e utiliza a API REST criada nas fases anteriores do projeto.
 
-## Sobre o projeto
 
-Este projeto faz parte do Tech Challenge da Fase 2 da FIAP Pos-Tech. A proposta e refatorar o backend de uma aplicacao de blogging educacional, permitindo que docentes criem, editem, removam e pesquisem postagens, enquanto alunos podem consultar os conteudos publicados.
+## Funcionalidades
 
-(Descricao)
+- Listagem e visualização individual de posts
+- Criação, edição e exclusão de posts x
+- Busca de posts por título, conteúdo e autor x
+- Login de alunos e professores x
+- Persistência da autenticação no navegador x
+- Layout responsivo para desktop e dispositivos móveis
+- Integração com API REST x
 
-## Tecnologias previstas
+Tecnologias utilizadas
 
-- Axios
 - React
+- JavaScript
+- Typescript
 - React Router DOM
-- Node.js
-- Express
-- Banco de dados Postgres
+- Axios
+- CSS
 - Docker
+- Git
 - GitHub Actions
-- Testes automatizados
+- Firebase
 
-## Status
 
-Projeto em desenvolvimento.
-    * Alterar descrições da Tech Challenge e Sobre o Projeto
-    * Alterar tecnologias previstas
-    * Alterar instruções 8, 9, 10, depois de alterações
+## Arquitetura Mobile x
 
-## Instruções
-1. Instalar os programas necessarios (comandos para verificar)
-    * git --version
-    * node -v
-    * npm -v
-    * docker --version
-    * docker compose version
+A seção mobile foi organizada separando páginas, componentes reutilizáveis e gerenciamento de autenticação.
 
-2. Clonar o repositório
-    * git clone https://github.com/Nat250/fiap-fullstack-techchallenge-fase3-Johannes
-  
-3.  Entrar na pasta do projeto
-    * cd fiap-fullstack-techchallenge-fase3-Johannes
+```text
+expo-mobile
+├── routes/
+│   ├── app.routes.tsx
+│   └── index.tsx
+└── src/
+    ├── app/screens/
+    │   ├── Home/
+    │   │   └── index.tsx
+    │   └── Login/
+    │       └── index.tsx
+    ├── components/
+    │   └── shared/
+    │       └── Header.tsx
+    └── config/
+        └── firebase.ts
+```
 
-4. Instalar dependencias
-    *  npm install
 
-5. Verificar o arquivo .env
-    * Dentro do projeto que possui os logins e senhas para acessar o projeto/database
+## Autenticação Mobile
 
-6. Abrir o Docker Desktop
-    * Abrir o Docker Desktop pelo menu iniciar e esperar ficar rodando
+Credenciais de E-mail e Senha de exemplo foram criados para demonstração nessa fase.
 
-7. Subir os containers da API e do PostgreSQL
-    * docker compose up --build
-      
-8. Testar a API viva e a conexao com banco
-    * http://localhost:3000/health
-    * http://localhost:3000/database/health
-      
-9. Conferir containers rodando em outro terminal, verificar os containers:
-    *    docker ps
-      
-10. Alternativa: usar o postman
+Credenciais de demonstração:
+
+```text
+E-Mail: 
+Senha: 
+```
+
+O estado de autenticação é gerenciado utilizando getReactNativePersistence do serviço de autenticação do Firebase, permitindo manter a sessão após a atualização da página.
+
+
+## Integração com o backend
+
+A integração com o backend foi, infelizmente, inviável. Os serviços do Firebase não foram funcionais coo foi demonstrado em aula, portanto foi impossível utilizar grande parte deles.
+
+
+## Executando localmente 
+
+### Pré-requisitos
+
+- Node.js 22
+- npm
+- Aplicativo Expo Go (seja em um dispositivo Android ou emulador)
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone https://github.com/Nat250/fiap-fullstack-techchallenge-fase4-Tentativa-Final-2.git
+cd fiap-fullstack-techchallenge-fase4-Tentativa-Final-2
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Em outra tela cmd, execute os comandos:
+
+```bash
+cd fiap-fullstack-techchallenge-fase4-Tentativa-Final-2
+cd expo-mobile
+npx expo run
+```
+
+Com isso, ou siga o link ou faça um scan do QR code após o comando.
+
+
+## Decisões técnicas
+
+O projeto utiliza componentes funcionais e Hooks do React, incluindo `useState` e `useEffect`.
+
+O **Firebase** é responsável pela navegação entre páginas e pelas rotas da aplicação e gerencia o estado global relacionado à autenticação.
+
+
+## Desafios encontrados
+
+Fora dificuldades de tempo devido a problemas fora do curso, praticamente todas as dificuldades do projeto estão relacionadas com o uso do Firebase como foi ensinado nas aulas. 
+
+Foi funcionalmente impossível gerar uma forma de navegação e comunicação através de API com o Firebase, também como comunicação com a database e o backend da fase anterior. O projeto da fase teve que ser refeito várias vezes, apenas a última sendo funcional depois de recriar tudo do zero em pânico.
+
+Tentativas de resolução de dúvidas com colegas também foi inviável, como todos ou sugeriram perguntar a solução a uma Inteligência Artificial, ou fizeram perguntas a uma IA ao invés de dar uma sugestão própria. O projeto enviado com atraso foi o mais bem desenvolvido em curto prazo.
+
+
+## Autores
+
+**Johannes Mattheus Krouwel - RM 372727**

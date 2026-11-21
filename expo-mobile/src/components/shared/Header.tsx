@@ -21,9 +21,29 @@ const styles = StyleSheet.create({
         borderColor: 'none'
     },
     headerText: {
-            fontWeight: 'bold',
-            fontSize: 20,
-            color: '#333',
-            letterSpacing: 1
+        fontWeight: 'bold',
+        fontSize: 20,
+        color: '#333',
+        letterSpacing: 1
+    },
+    container: {
+        width: '100%',
+        height: 80,
+        backgroundColor: '#4a90e2',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+        flex: 1
+    },
+    backButtonContainer: {
+        position: 'absolute',
+        left: 15,
+        paddingRight: 10
+    },
+    menuContainer: {
+        position: 'absolute',
+        right: 15,
+        paddingRight: 10
     }
 });
