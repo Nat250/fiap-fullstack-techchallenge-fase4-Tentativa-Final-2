@@ -1,10 +1,11 @@
 import Header from '@/components/shared/Header';
+import { auth } from '@/config/firebase';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
-//import { auth } from '@/config/firebase';
 //import { RootStackParamList } from "../../../types";
 
 /*type HomeScreenNavigationProp = NativeStackNavigationProp<
@@ -20,9 +21,9 @@ export default function Login() {
     const [error, setError] = useState('')
     const navigation = useNavigation()
 
-    const handleButtonPress = async () => {
+    const handleLogin = async () => {
         try {
-//            await placeholdercommand(auth, user, password);
+            await signInWithEmailAndPassword(auth, user, password);
 //            navigation.navigate('Home')
         }catch(error:any){
             setError(error.message)

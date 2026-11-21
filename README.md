@@ -29,7 +29,7 @@ Tecnologias utilizadas
 - Firebase
 
 
-## Arquitetura Mobile x
+## Arquitetura Mobile 
 
 A seção mobile foi organizada separando páginas, componentes reutilizáveis e gerenciamento de autenticação.
 
@@ -59,8 +59,8 @@ Credenciais de E-mail e Senha de exemplo foram criados para demonstração nessa
 Credenciais de demonstração:
 
 ```text
-E-Mail: 
-Senha: 
+E-Mail: emailexemplo@email.com
+Senha: SenhaExemplo
 ```
 
 O estado de autenticação é gerenciado utilizando getReactNativePersistence do serviço de autenticação do Firebase, permitindo manter a sessão após a atualização da página.

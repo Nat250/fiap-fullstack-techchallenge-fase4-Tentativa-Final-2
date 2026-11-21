@@ -1,11 +1,13 @@
 import Header from '@/components/shared/Header';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from 'expo-router';
 import { useEffect, useState } from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const ListScreen = () => {
     const [data, setData] = useState<any[]>([]);
     const [refreshing, setRefreshing] = useState(false);
+    const navigation = useNavigation()
 
     useEffect(() => {
         fetchData();
@@ -36,6 +38,10 @@ const ListScreen = () => {
         setRefreshing(false);
     };
 
+    const navigateLogin = () => {
+        navigation.navigate("Login");
+    };
+
     const loadMoreData = () => {
         // Simula a obtenção de mais dados
         setData([...data, { id: (data.length + 1).toString(), title: `Item ${data.length + 1}` }]);
@@ -48,6 +54,10 @@ const ListScreen = () => {
         <TouchableOpacity style={styles.container}>
             
             <Header headerText={'Posts'}/>
+            <Text></Text>
+            <Text></Text>
+
+            <Button /*style={styles.button}*/ title="Login" onPress={navigateLogin} />
             <Text></Text>
             <Text></Text>
 
@@ -90,6 +100,14 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 4,
     },
+    button: {
+        backgroundColor: 'blue',
+        borderColor: 'grey',
+        borderWidth: 1,
+        width: '50%',
+        alignItems: 'center',
+        padding: 5
+    }
 });
 
 export default ListScreen;
