@@ -119,6 +119,8 @@ Foi funcionalmente impossível gerar uma forma de navegação e comunicação at
 
 Tentativas de resolução de dúvidas com colegas também foi inviável, como todos ou sugeriram perguntar a solução a uma Inteligência Artificial, ou fizeram perguntas a uma IA ao invés de dar uma sugestão própria. O projeto enviado com atraso foi o mais bem desenvolvido em curto prazo.
 
+Softwares de emulação de dispositivos Android também foram impossíveis de usar devido ao hardware antigo de meu computador. Gostaria de ter feito um projeto melhor, mas infelizmente penso que vou ter que fazer uma atividade recuperativa.
+
 
 ## Autores
 
